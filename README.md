@@ -12,11 +12,11 @@ Therefore we overrite the `MOV` instruction with a `JMP` instruction to our func
 Target function before injection:
 
 ```
-  00F41000 >/$ 55             PUSH EBP
-  00F41001  |. 8BEC           MOV EBP,ESP
-  00F41003  |. B8 02000000    MOV EAX,2                   <-- this is where we want to place out hook
-  00F41008  |. 5D             POP EBP
-  00F41009  \. C3             RETN
+00F41000 >/$ 55             PUSH EBP
+00F41001  |. 8BEC           MOV EBP,ESP
+00F41003  |. B8 02000000    MOV EAX,2                   <-- this is where we want to place out hook
+00F41008  |. 5D             POP EBP
+00F41009  \. C3             RETN
 ```
 
 after injection:
