@@ -1,0 +1,7 @@
+.vs
+Debug
+Release
+poc-function-hooking/Debug
+poc-function-hooking/Release
+poc-function-hooking-dummy-process/Debug
+poc-function-hooking-dummy-process/Release
