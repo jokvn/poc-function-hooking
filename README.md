@@ -22,11 +22,11 @@ Target function before injection:
 after injection:
 
 ```
-	00F41000 >/$ 55             PUSH EBP
-	00F41001  |. 8BEC           MOV EBP,ESP
-	00F41003  |.-E9 F8FF8056    JMP poc-fu_1.hookFunction
-	00F41008  |. 5D             POP EBP
-	00F41009  \. C3             RETN
+00F41000 >/$ 55             PUSH EBP
+00F41001  |. 8BEC           MOV EBP,ESP
+00F41003  |.-E9 F8FF8056    JMP poc-fu_1.hookFunction
+00F41008  |. 5D             POP EBP
+00F41009  \. C3             RETN
 ```
 
 After the hook was placed, we jump back to the next instruction after our jump to continue program flow.
@@ -37,11 +37,11 @@ After the hook was placed, we jump back to the next instruction after our jump t
 ```
 
 ```
-	00F41000 >/$ 55             PUSH EBP
-	00F41001  |. 8BEC           MOV EBP,ESP
-	00F41003  |.-E9 F8FF8056    JMP poc-fu_1.hookFunction
-	00F41008  |. 5D             POP EBP                      <-- jump back to here
-	00F41009  \. C3             RETN
+00F41000 >/$ 55             PUSH EBP
+00F41001  |. 8BEC           MOV EBP,ESP
+00F41003  |.-E9 F8FF8056    JMP poc-fu_1.hookFunction
+00F41008  |. 5D             POP EBP                      <-- jump back to here
+00F41009  \. C3             RETN
 ```
 
 Disassembler used was `OllyDbg`.
